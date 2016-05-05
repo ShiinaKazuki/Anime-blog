@@ -1,0 +1,18 @@
+<p>
+  <strong>Title:</strong>
+  <%= @anime.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @anime.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @anime.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+<%= link_to 'Edit Anime', edit_anime_path(@anime) %> |
+<%= link_to 'Back to Animes', animes_path %>
