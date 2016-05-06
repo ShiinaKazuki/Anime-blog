@@ -8,6 +8,12 @@
   <%= @anime.text %>
 </p>
 
+<h2>Episodes</h2>
+<%= render @anime.episodes %>
+
+<h2>Add a episode:</h2>
+<%= render "episodes/form" %>
+
 <h2>Comments</h2>
 <%= render @anime.comments %>
 

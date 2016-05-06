@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :animes do
     resources :comments
+    resources :episodes
   end
   get 'home/index'
 

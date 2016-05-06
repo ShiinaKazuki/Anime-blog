@@ -1,0 +1,13 @@
+<%= form_for([@anime, @anime.episodes.build]) do |f| %>
+  <p>
+    <%= f.label :Episode %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

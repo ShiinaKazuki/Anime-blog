@@ -1,0 +1,15 @@
+<p>
+  <strong>Episode:</strong>
+  <%= episode.commenter %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= episode.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Episode', [episode.anime, episode],
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %>
+</p>
