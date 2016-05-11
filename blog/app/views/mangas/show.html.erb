@@ -1,0 +1,13 @@
+<p>
+  <strong>Title:</strong>
+  <%= @manga.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @manga.text %>
+</p>
+
+
+<%= link_to 'Back', mangas_path %>
+| <%= link_to 'Edit', edit_manga_path(@manga) %>

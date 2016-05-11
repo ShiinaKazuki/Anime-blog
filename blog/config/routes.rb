@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :second_season_episodes
   end
+  resources :mangas
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
