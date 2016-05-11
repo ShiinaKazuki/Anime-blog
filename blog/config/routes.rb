@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   resources :secondseasons do
     resources :posts
+    resources :second_season_episodes
   end
   get 'home/index'
 

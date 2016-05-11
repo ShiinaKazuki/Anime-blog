@@ -1,0 +1,13 @@
+<%= form_for([@secondseason, @secondseason.second_season_episodes.build]) do |f| %>
+  <p>
+    <%= f.label :Episode %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :Title %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -8,6 +8,12 @@
   <%= @secondseason.text %>
 </p>
 
+<h2>Episodes</h2>
+<%= render @secondseason.second_season_episodes %>
+
+<h2>Add an episode:</h2>
+<%= render "second_season_episodes/form" %>
+
 <h2>Comments</h2>
 <%= render @secondseason.posts %>
 
