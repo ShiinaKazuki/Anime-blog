@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     resources :comments
     resources :episodes
   end
-  resources :secondseasons
+  resources :secondseasons do
+    resources :posts
+  end
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -8,5 +8,11 @@
   <%= @secondseason.text %>
 </p>
 
+<h2>Comments</h2>
+<%= render @secondseason.posts %>
+
+<h2>Add a comment:</h2>
+<%= render "posts/form" %>
+
 <%= link_to 'Back', secondseasons_path %>
 | <%= link_to 'Edit', edit_secondseason_path(@secondseason) %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511002344) do
+ActiveRecord::Schema.define(version: 20160511010255) do
 
   create_table "animes", force: true do |t|
     t.string   "title"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 20160511002344) do
   end
 
   add_index "episodes", ["anime_id"], name: "index_episodes_on_anime_id"
+
+  create_table "posts", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "secondseason_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["secondseason_id"], name: "index_posts_on_secondseason_id"
 
   create_table "secondseasons", force: true do |t|
     t.string   "title"
