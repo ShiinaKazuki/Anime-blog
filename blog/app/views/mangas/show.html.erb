@@ -14,5 +14,11 @@
 <h2>Add a comment:</h2>
 <%= render "chapters/form" %>
 
+<h2>Comments</h2>
+<%= render @manga.views %>
+
+<h2>Add a comment:</h2>
+<%= render "views/form" %>
+
 <%= link_to 'Back', mangas_path %>
 | <%= link_to 'Edit', edit_manga_path(@manga) %>

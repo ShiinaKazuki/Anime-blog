@@ -1,0 +1,15 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= view.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= view.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Comment', [view.manga, view],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

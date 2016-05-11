@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   resources :mangas do
     resources :chapters
+    resources :views
   end
   get 'home/index'
 

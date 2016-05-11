@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511020849) do
+ActiveRecord::Schema.define(version: 20160511023852) do
 
   create_table "animes", force: true do |t|
     t.string   "title"
@@ -83,5 +83,15 @@ ActiveRecord::Schema.define(version: 20160511020849) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "views", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "manga_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "views", ["manga_id"], name: "index_views_on_manga_id"
 
 end
