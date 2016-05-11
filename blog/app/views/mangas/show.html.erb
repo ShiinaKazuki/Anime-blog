@@ -8,6 +8,11 @@
   <%= @manga.text %>
 </p>
 
+<h2>Comments</h2>
+<%= render @manga.chapters %>
+
+<h2>Add a comment:</h2>
+<%= render "chapters/form" %>
 
 <%= link_to 'Back', mangas_path %>
 | <%= link_to 'Edit', edit_manga_path(@manga) %>

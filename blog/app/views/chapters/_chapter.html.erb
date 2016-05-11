@@ -1,0 +1,15 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= chapter.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= chapter.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Chapter', [chapter.manga, chapter],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
