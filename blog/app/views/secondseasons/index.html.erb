@@ -1,0 +1,23 @@
+<h1>Listing secondseasons</h1>
+
+<%= link_to 'New secondseason', new_secondseason_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="3"></th>
+  </tr>
+
+<% @secondseasons.each do |secondseason| %>
+  <tr>
+    <td><%= secondseason.title %></td>
+    <td><%= secondseason.text %></td>
+    <td><%= link_to 'Show', secondseason_path(secondseason) %></td>
+    <td><%= link_to 'Edit', edit_secondseason_path(secondseason) %></td>
+    <td><%= link_to 'Destroy', secondseason_path(secondseason),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New secondseason', new_secondseason_path %>
