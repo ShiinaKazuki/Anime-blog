@@ -31,6 +31,7 @@
       transition: all 0.2s linear; }
       .overlay-fade-in img {
         transition: all 0.2s linear; }
+
         .overlay-fade-in .image-overlay-content {
           opacity: 0;
           background-color: rgba(0, 0, 0, 0.4);
@@ -38,7 +39,7 @@
           .overlay-fade-in h2 {
             color: #f2f2f2;
             font-size: 1.8rem;
-            margin-top: 40%;
+            margin-top: 0%;
             opacity: 0;
             transition: all 0.2s ease-in-out;
             background: rgba(0, 0, 0, 0.7); }
@@ -79,7 +80,7 @@
                               .overlay-slide-in-left h2 {
                                 font-size: 1.8rem;
                                 background: rgba(255, 255, 255, 0.7);
-                                margin-top: 40%;
+                                margin-top: 0%;
                                 color: #000;
                                 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
                                 .overlay-slide-in-left p {
@@ -101,7 +102,6 @@
                                       .overlay-slide-in-left:hover .image-overlay-content {
                                         transform: translateX(0px); }
                                         .overlay-slide-in-left:hover img {
-                                          transform: translateX(80%);
                                           transition-delay: 0.1s; }
                                           .overlay-slide-in-left:hover p {
                                             opacity: 1;
@@ -132,7 +132,7 @@
                                                     .overlay-fade-in-new-background h2 {
                                                       color: #000;
                                                       font-size: 1.6rem;
-                                                      margin-top: 30%;
+                                                      margin-top: 0%;
                                                       opacity: 0;
                                                       transition: all 0.2s ease-in-out; }
                                                       .overlay-fade-in-new-background p {
@@ -142,8 +142,6 @@
                                                           transition: all 0.2s ease-in-out; }
                                                           .overlay-fade-in-new-background:hover img {
                                                             filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-                                                            filter: gray;
-                                                            -webkit-filter: grayscale(100%);
                                                             transform: scale(1.5); }
                                                             .overlay-fade-in-new-background:hover .image-overlay-content {
                                                               opacity: 1; }
@@ -187,59 +185,6 @@ body {
   background-color: #fff;
 }
 
-.toggle-menu {
-  position: relative;
-  font-size: 4rem;
-  z-index: 5000;
-  color: #333;
-  top: -0.5rem;
-  left: 1.5rem;
-  transition: all 0.4s ease-in-out; }
-  .toggle-menu:hover {
-    transition: all 0.4s ease-in-out;
-    color: gray; }
-
-    .overlay-menu {
-      position: absolute;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      margin: 0;
-      padding: 5rem 0 0;
-      opacity: 0;
-      list-style: none;
-      background: url("http://www.nasa.gov/sites/default/files/cygx1_ill.jpg") no-repeat center center;
-      background-size: cover;
-      text-align: center;
-      transform: translateX(-100%) rotateX(40deg);
-      transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985); }
-      .overlay-menu li {
-        font-size: 1.5rem; }
-        .overlay-menu a {
-          display: block;
-          color: #fff;
-          font-weight: bold;
-          height: 6.25rem;
-          line-height: 6.25rem;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-          text-decoration: none; }
-          .overlay-menu a:hover {
-            background-color: #0f88ff; }
-            .overlay-menu.is-open ~ .toggle-menu {
-              display: inline-block;
-              transition: all 0.4s ease-in-out;
-              transform: rotate(135deg);
-              color: white; }
-
-              .is-open {
-                top: 0;
-                opacity: 1;
-                transform: perspective(200px) translateX(0) rotateX(0); }
-
-
 </style>
 
 <body style="background-color:black">
@@ -248,18 +193,9 @@ body {
 
 <body>
 
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-
-  <nav role="navigation">
-    <ul id="menu" class="overlay-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <a class="toggle-menu" href="#menu"><i class="fi-plus"></i></a>
-  </nav>
-
   <div class="parallax-background">
+    <div class="intro-text">
+    </div>
   </div>
 
 
@@ -268,63 +204,51 @@ body {
 
       <div class="image-wrapper overlay-fade-in">
 
-        <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" />
+        <img src="http://cdn.myanimelist.net/images/anime/10/73591l.jpg"style="height:450px;width:450px" />
 
         <div class="image-overlay-content">
-          <h2>.overlay-fade-in</h2>
-          <p class="price">$99.99</p>
-          <a href="#" class="button"><%= link_to 'Animes', controller: 'animes' %></a>
+          <h2><img src="https://i.imgur.com/xN8jJe7.gif"style="height:360px;width:450px" /></h2></br>
+          <h1><%= link_to 'Animes', controller: 'animes' %></h1>
         </div>
 
       </div>
 
     </div>
 
-<div class="small-6 columns">
+    <div class="small-6 columns">
 
-  <div class="image-wrapper overlay-fade-in-new-background">
+        <div class="image-wrapper overlay-fade-in-new-background">
 
-    <img src="https://tourneau.scene7.com/is/image/tourneau/FRK0100001?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" />
+          <img src="http://cdn.myanimelist.net/images/anime/8/72855l.jpg"style="height:450px;width:450px" />
 
-    <div class="image-overlay-content">
-      <h2>.overlay-fade-in-new-background</h2>
-      <p class="price">$189,000</p>
-      <a href="#" class="button"><%= link_to 'Second Season Animes', controller: 'secondseasons' %></a>
+          <div class="image-overlay-content">
+            <h2><img src="http://image.noelshack.com/fichiers/2015/46/1447521870-grisaia-241.gif"style="height:315px;width:320px" /></h2></br></br>
+            <h1><%= link_to 'Second Season Animes', controller: 'secondseasons' %></h1>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
+    <div class="small-3 small-centered columns">
+
+        <div class="image-wrapper overlay-slide-in-left">
+
+          <img src="http://bit.ly/1WBj86P"style="height:450px;width:450px" />
+
+          <div class="image-overlay-content">
+            <h2><img src="http://bit.ly/1W0aKx7"style="height:385px;width:450px" /></h2>
+            <h1><%= link_to 'Mangas', controller: 'mangas' %></a></h1>
+          </div>
+
+        </div>
+
+      </div>
+
 
 </div>
-
-</div>
-
-<div class="manga">
-<div class="small-3 small-centered columns">
-
-  <div class="image-wrapper overlay-slide-in-left">
-
-    <img src="https://tourneau.scene7.com/is/image/tourneau/ZEN0101011?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" />
-
-    <div class="image-overlay-content">
-      <h2>.overlay-slide-in-left</h2>
-      <p class="price">$2319.99</p>
-      <a href="#" class="button"><%= link_to 'Mangas', controller: 'mangas' %></a>
-    </div>
-
-  </div>
-
-</div>
-</div>
-</div>
-
-</div>
-
-<script>
-$(".toggle-menu").on("click", function(){
-  $("#menu").toggleClass("is-open");
-});
-
-</script>
 
 </body>
 
